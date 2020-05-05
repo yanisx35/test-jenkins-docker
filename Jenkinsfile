@@ -26,7 +26,7 @@ pipeline {
             steps {
                 sh './gradlew --no-daemon checkstyleMain checkstyleTest findbugsMain findbugsTest pmdMain pmdTest cpdCheck'
             }
-			post {
+			/*post {
 				always {
 					step([
 						$class         : 'FindBugsPublisher',
@@ -44,7 +44,7 @@ pipeline {
 						canRunOnFailed : true
 					])
 				}
-			}
+			}*/
         }
 		
 		stage('Test') {
